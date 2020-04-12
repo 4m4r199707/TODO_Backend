@@ -1,4 +1,4 @@
-package com.todo.restfullwebservice;
+package com.todo.restfullwebservice.helloworld;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,8 @@ public class helloworldController {
 	
 	@GetMapping(path ="/helloworld-bean")
 	public helloworldBean helloworldBean() {
-		return new helloworldBean("hello World");
+		throw new RuntimeException("Some error has occured!! contact support at 100....!!!");
+//		return new helloworldBean("hello World");
 	}
 	
 	@GetMapping(path ="/helloworld/path-variable/{name}")
